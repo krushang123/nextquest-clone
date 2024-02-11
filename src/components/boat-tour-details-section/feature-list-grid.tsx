@@ -26,7 +26,7 @@ const FeatureList = (props: FeatureListProps) => {
 
       <List spacing={3}>
         {features.map((feature) => (
-          <ListItem key={title} display='flex' alignItems='center' gap={2}>
+          <ListItem key={feature} display='flex' alignItems='center' gap={2}>
             <ListIcon as={MdCheckCircle} boxSize={8} color='pink.500' />
             {feature}
           </ListItem>
