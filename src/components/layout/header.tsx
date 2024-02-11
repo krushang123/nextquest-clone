@@ -18,6 +18,7 @@ const Header = () => (
     zIndex='sticky'
     bgColor='primary.500'
     color='white'
+    borderBottom='1px solid white'
   >
     <Flex
       w='1210px'

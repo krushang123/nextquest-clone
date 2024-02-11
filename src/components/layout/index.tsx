@@ -29,9 +29,8 @@ const Layout = (props: LayoutProps) => {
           <Container
             as='main'
             centerContent
-            px={10}
-            py={8}
             maxW='full'
+            p={0}
             minH='calc(100vh - 85px)'
           >
             <SkipNavContent id='skip-nav' />

@@ -50,18 +50,7 @@ const NavigationList = (props: NavigationListProps) => {
 }
 
 const Navigation = () => (
-  <Box
-    as='nav'
-    h={85}
-    maxW='100vw'
-    pos='sticky'
-    top={0}
-    right={0}
-    left={0}
-    zIndex='sticky'
-    bgColor='primary.500'
-    color='white'
-  >
+  <Box as='nav' h={85} maxW='100vw' bgColor='primary.500' color='white'>
     <NavigationList items={navigationItems} />
   </Box>
 )
