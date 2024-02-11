@@ -7,6 +7,7 @@ import BoatTourDetailsSection from "@/components/boat-tour-details-section"
 import ImageGallerySection from "@/components/image-gallery-section"
 import CustomizedExperienceSection from "@/components/customized-experience-section.tsx"
 import RelatedToursSection from "@/components/related-tours-section"
+import TrustedBySection from "@/components/trusted-by-section"
 
 const IndexPage = () => (
   <Box w='full'>
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <ImageGallerySection />
     <CustomizedExperienceSection />
     <RelatedToursSection />
+    <TrustedBySection />
   </Box>
 )
 
