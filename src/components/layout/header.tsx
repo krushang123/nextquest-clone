@@ -1,28 +1,56 @@
 "use client"
 
-import { Flex } from "@chakra-ui/layout"
+import { Box, Flex, HStack } from "@chakra-ui/layout"
+import { Button } from "@chakra-ui/button"
 
-const Header = () => {
-  return (
+import Logo from "./logo"
+import LanguageMenu from "./language-menu"
+
+const Header = () => (
+  <Box
+    as='header'
+    h={85}
+    maxW='100vw'
+    pos='sticky'
+    top={0}
+    right={0}
+    left={0}
+    zIndex='sticky'
+    bgColor='primary.500'
+    color='white'
+  >
     <Flex
-      as='header'
-      h={85}
-      maxW={`calc(100vw - 1210px)`}
-      pos='sticky'
-      top={0}
-      right={0}
-      left={0}
-      zIndex='sticky'
+      w='1210px'
+      h='full'
       justifyContent='space-between'
       align='center'
-      px={{ base: 6, lg: 10 }}
-      py={{ base: 2, lg: 6 }}
-      boxShadow={{ base: "lg", lg: "none" }}
-      bgColor='primary.500'
+      mx='auto'
     >
-      Logo
+      <Logo />
+
+      <HStack spacing={6}>
+        <LanguageMenu />
+
+        <Button
+          variant='outline'
+          borderColor='white'
+          color='white'
+          _hover={{ background: "transparent" }}
+        >
+          Download Brochure
+        </Button>
+
+        <Button
+          bgColor='white'
+          color='#8C52FF'
+          textTransform='uppercase'
+          _hover={{ bgColor: "white" }}
+        >
+          Contact Us
+        </Button>
+      </HStack>
     </Flex>
-  )
-}
+  </Box>
+)
 
 export default Header

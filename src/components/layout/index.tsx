@@ -1,4 +1,6 @@
-import React, { ReactNode } from "react"
+"use client"
+
+import { ReactNode } from "react"
 
 import { Container, Box } from "@chakra-ui/layout"
 import { SkipNavLink, SkipNavContent } from "@chakra-ui/skip-nav"
@@ -25,9 +27,10 @@ const Layout = (props: LayoutProps) => {
           <Container
             as='main'
             centerContent
-            px={{ base: 6, lg: 10 }}
+            px={10}
             py={8}
-            minH={`cal(100vh - 85px)`}
+            maxW='full'
+            minH='calc(100vh - 85px)'
           >
             <SkipNavContent id='skip-nav' />
             {children}

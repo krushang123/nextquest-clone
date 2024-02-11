@@ -3,6 +3,7 @@ import { type Dict } from "@chakra-ui/utils"
 
 import { styles } from "./style"
 import { colors } from "./foundations/colors"
+import { buttonTheme } from "./components/button"
 
 const customTheme: Dict = extendTheme(
   {
@@ -14,7 +15,9 @@ const customTheme: Dict = extendTheme(
     },
   },
   {
-    components: {},
+    components: {
+      Button: buttonTheme,
+    },
   },
   withDefaultColorScheme({
     colorScheme: "primary",
