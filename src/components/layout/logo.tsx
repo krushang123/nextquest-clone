@@ -12,6 +12,7 @@ const Logo = () => (
         src='/images/logo.png'
         alt='Nextquest Logo'
         blurDataURL='/images/logo.png'
+        sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
       />
     </Box>
   </Link>

@@ -6,10 +6,41 @@ import { Button } from "@chakra-ui/button"
 import { Box } from "@chakra-ui/layout"
 import { Image } from "@chakra-ui/next-js"
 
-const languages = [
+interface Language {
+  code: string
+  label: string
+  flag: string
+}
+
+interface LanguageMenuItemProps {
+  language: Language
+}
+
+const languages: Language[] = [
   { code: "eng", label: "ENG", flag: "/images/eng-flag.png" },
   { code: "nl", label: "NL", flag: "/images/nl-flag.png" },
 ]
+
+const LanguageMenuItem = (props: LanguageMenuItemProps) => {
+  const { language } = props
+
+  return (
+    <MenuItem key={language.code}>
+      <Box position='relative' w='16px' h='11px' mr='12px'>
+        <Image
+          priority
+          fill
+          src={language.flag}
+          alt={`${language.label} Flag`}
+          blurDataURL={language.flag}
+          sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+        />
+      </Box>
+
+      <span>{language.label}</span>
+    </MenuItem>
+  )
+}
 
 const LanguageMenu = () => (
   <Menu>
@@ -18,19 +49,8 @@ const LanguageMenu = () => (
     </MenuButton>
 
     <MenuList color='black'>
-      {languages.map((lang) => (
-        <MenuItem key={lang.code}>
-          <Box position='relative' w='16px' h='11px' mr='12px'>
-            <Image
-              priority
-              fill
-              src={lang.flag}
-              alt={`${lang.label} Flag`}
-              blurDataURL={lang.flag}
-            />
-          </Box>
-          <span>{lang.label}</span>
-        </MenuItem>
+      {languages.map((language) => (
+        <LanguageMenuItem key={language.code} language={language} />
       ))}
     </MenuList>
   </Menu>
