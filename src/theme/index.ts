@@ -1,7 +1,7 @@
-import { extendTheme, withDefaultColorScheme } from '@chakra-ui/react';
-import { type Dict } from '@chakra-ui/utils';
+import { extendTheme, withDefaultColorScheme } from "@chakra-ui/react"
+import { type Dict } from "@chakra-ui/utils"
 
-import { styles } from './style';
+import { styles } from "./style"
 
 const customTheme: Dict = extendTheme(
   {
@@ -15,8 +15,8 @@ const customTheme: Dict = extendTheme(
     components: {},
   },
   withDefaultColorScheme({
-    colorScheme: 'orange',
-  })
-);
+    colorScheme: "orange",
+  }),
+)
 
-export default customTheme;
+export default customTheme

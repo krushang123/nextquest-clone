@@ -1,18 +1,18 @@
-'use client';
+"use client"
 
-import { type ReactNode } from 'react';
+import { type ReactNode } from "react"
 
-import { CacheProvider } from '@chakra-ui/next-js';
-import { ChakraProvider, cookieStorageManager } from '@chakra-ui/react';
+import { CacheProvider } from "@chakra-ui/next-js"
+import { ChakraProvider, cookieStorageManager } from "@chakra-ui/react"
 
-import theme from '../theme';
+import theme from "../theme"
 
 interface ChakraUIProviderProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 export const ChakraUIProvider = (props: ChakraUIProviderProps) => {
-  const { children } = props;
+  const { children } = props
 
   return (
     <CacheProvider>
@@ -23,12 +23,12 @@ export const ChakraUIProvider = (props: ChakraUIProviderProps) => {
           defaultOptions: {
             duration: 3000,
             isClosable: true,
-            position: 'bottom',
+            position: "bottom",
           },
         }}
       >
         {children}
       </ChakraProvider>
     </CacheProvider>
-  );
-};
+  )
+}
