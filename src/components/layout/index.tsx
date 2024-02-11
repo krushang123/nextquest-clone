@@ -6,6 +6,7 @@ import { Container, Box } from "@chakra-ui/layout"
 import { SkipNavLink, SkipNavContent } from "@chakra-ui/skip-nav"
 
 import Header from "./header"
+import Navigation from "./navigation"
 
 interface LayoutProps {
   children: ReactNode
@@ -23,6 +24,7 @@ const Layout = (props: LayoutProps) => {
       <Box display='flex'>
         <Box w='full'>
           <Header />
+          <Navigation />
 
           <Container
             as='main'
