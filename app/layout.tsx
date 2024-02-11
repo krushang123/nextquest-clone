@@ -2,9 +2,10 @@ import { type ReactNode } from "react"
 
 import { Lexend_Deca } from "next/font/google"
 
-import { Providers } from "../src/providers"
+import { Providers } from "@/providers/index"
+import Layout from "@/components/layout"
 
-interface IRootLayoutProps {
+interface RootLayoutProps {
   children: ReactNode
 }
 
@@ -15,13 +16,15 @@ const ubuntu = Lexend_Deca({
   display: "swap",
 })
 
-const RootLayout = (props: IRootLayoutProps) => {
+const RootLayout = (props: RootLayoutProps) => {
   const { children } = props
 
   return (
     <html lang='en' data-theme='light'>
       <body className={ubuntu.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <Layout>{children}</Layout>
+        </Providers>
       </body>
     </html>
   )
