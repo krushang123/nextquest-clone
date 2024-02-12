@@ -1,64 +1,48 @@
-# TypeScript Next.js example
+# NextQuest Clone
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+## Overview
 
-## Deploy your own
+This project is a clone of the
+[NextQuest](https://nextquest.nl/en/services-and-courses/boat-tour-international-bar/)
+website, implemented using React 18+ Next.js 14+, TypeScript, Chakra UI, ESLint,
+and Prettier.
 
-Deploy the example using
-[Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example)
-or preview live with
-[StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-typescript)
+## Project Description
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-typescript&project-name=with-typescript&repository-name=with-typescript)
+The goal of this project is to replicate the NextQuest website to showcase your
+skills in building modern web applications with the latest technologies. It
+includes the use of Chakra UI for styling, Next.js for server-side rendering,
+TypeScript for static typing, React.js for building the UI components, ESLint
+for code linting, and Prettier for code formatting.
 
-## How to use it?
+## Table of Contents
 
-Execute
-[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
-with [npm](https://docs.npmjs.com/cli/init),
-[Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io)
-to bootstrap the example:
+- [Setup Instructions](#setup-instructions)
+- [Live Demo](#live-demo)
 
-```bash
-npx create-next-app --example with-typescript with-typescript-app
-```
+# Setup Instructions
 
-```bash
-yarn create next-app --example with-typescript with-typescript-app
-```
+1. **Clone the repository:**
 
-```bash
-pnpm create next-app --example with-typescript with-typescript-app
-```
+   ```bash
+   git clone https://github.com/krushang123/nextquest-clone.git
+   ```
 
-Deploy it to the cloud with
-[Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example)
-([Documentation](https://nextjs.org/docs/deployment)).
+2. **Navigate to the project directory:**
 
-## Notes
+   ```bash
+   cd nextquest-clone
+   ```
 
-This example shows how to integrate the TypeScript type system into Next.js.
-Since TypeScript is supported out of the box with Next.js, all we have to do is
-to install TypeScript.
+3. **Install Dependencies:**
 
-```
-npm install --save-dev typescript
-```
+   - yarn install
 
-To enable TypeScript's features, we install the type declarations for React and
-Node.
+4. **Run the Development Server:**
 
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
+   - yarn dev
 
-When we run `next dev` the next time, Next.js will start looking for any `.ts`
-or `.tsx` files in our project and builds it. It even automatically creates a
-`tsconfig.json` file for our project with the recommended settings.
+# Live Demo
 
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for
-Next.js' modules straight away.
-
-A `type-check` script is also added to `package.json`, which runs TypeScript's
-`tsc` CLI in `noEmit` mode to run type-checking separately. You can then include
-this, for example, in your `test` scripts.
+For a live demo of the Nextquest clone project, please visit
+https://nextquest-clone.vercel.app/
