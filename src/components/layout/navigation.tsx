@@ -24,13 +24,13 @@ const navigationItems: NavigationItem[] = [
   { label: "Blog", link: "/" },
 ]
 
-const NavigationList = (props: NavigationListProps) => {
+export const NavigationList = (props: NavigationListProps) => {
   const { items } = props
 
   return (
     <List
       display='flex'
-      w='1210px'
+      w={{ base: "100%", xl: "1210px" }}
       h='full'
       justifyContent='space-between'
       alignItems='center'
@@ -50,7 +50,14 @@ const NavigationList = (props: NavigationListProps) => {
 }
 
 const Navigation = () => (
-  <Box as='nav' h={85} maxW='100vw' bgColor='primary.500' color='white'>
+  <Box
+    as='nav'
+    h={85}
+    px={{ base: 4, xl: 0 }}
+    maxW='100vw'
+    bgColor='primary.500'
+    color='white'
+  >
     <NavigationList items={navigationItems} />
   </Box>
 )

@@ -4,9 +4,21 @@ import { Button } from "@chakra-ui/button"
 import { Box, Heading, VStack } from "@chakra-ui/layout"
 
 const HeroSection = () => (
-  <Box as='section' w='full' bgColor='primary.500'>
-    <VStack spacing={10} w='1210px' mx='auto' py={20} color='white'>
-      <Heading as='h1' fontSize='6xl' color='inherit' fontWeight='extrabold'>
+  <Box as='section' w='full' px={{ base: 4, xl: 0 }} bgColor='primary.500'>
+    <VStack
+      spacing={10}
+      w={{ base: "100%", xl: "1210px" }}
+      mx='auto'
+      py={20}
+      color='white'
+      textAlign='center'
+    >
+      <Heading
+        as='h1'
+        fontSize={{ base: "4xl", lg: "5xl", xl: "6xl" }}
+        color='inherit'
+        fontWeight='extrabold'
+      >
         Boat Tour-Extended Dutch Bar
       </Heading>
 

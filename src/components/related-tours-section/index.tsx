@@ -75,13 +75,18 @@ const TourCard = (props: TourCardProps) => {
 }
 
 const RelatedToursSection = () => (
-  <Box as='section' w='full' bgColor='#F1EAFF' py={20}>
-    <VStack spacing={14} align='flex-start' w='1210px' mx='auto'>
+  <Box as='section' w='full' bgColor='#F1EAFF' py={20} px={{ base: 4, xl: 0 }}>
+    <VStack
+      spacing={14}
+      align='flex-start'
+      w={{ base: "100%", xl: "1210px" }}
+      mx='auto'
+    >
       <Heading fontSize='5xl' fontWeight='bold'>
         You may also like
       </Heading>
 
-      <SimpleGrid w='full' columns={3} spacing={12}>
+      <SimpleGrid w='full' columns={{ base: 1, md: 2, xl: 3 }} spacing={12}>
         {tourData.map((tour) => (
           <TourCard key={tour.title} tour={tour} />
         ))}

@@ -207,7 +207,12 @@ const ContactUsForm = () => {
           onChange={handleCheckedSubscribe}
         />
 
-        <Button type='submit' w='full' isLoading={isSubmitting}>
+        <Button
+          ml={{ md: "auto" }}
+          type='submit'
+          w={{ base: "full", md: "unset" }}
+          isLoading={isSubmitting}
+        >
           Submit
         </Button>
       </VStack>

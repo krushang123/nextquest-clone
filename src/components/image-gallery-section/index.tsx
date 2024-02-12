@@ -1,6 +1,6 @@
 "use client"
 
-import { Box, HStack } from "@chakra-ui/layout"
+import { Box, SimpleGrid } from "@chakra-ui/layout"
 
 interface ImageGalleryItemProps {
   imageSrc: string
@@ -17,7 +17,7 @@ const ImageGalleryItem = (props: ImageGalleryItemProps) => {
 
   return (
     <Box
-      w='320px'
+      w='full'
       h='380px'
       bgImage={`url(${imageSrc})`}
       rounded='2rem'
@@ -29,12 +29,17 @@ const ImageGalleryItem = (props: ImageGalleryItemProps) => {
 }
 
 const ImageGallerySection = () => (
-  <Box as='section' w='full'>
-    <HStack spacing={6} w='1210px' mx='auto'>
+  <Box as='section' w='full' px={{ base: 4, xl: 0 }}>
+    <SimpleGrid
+      columns={{ base: 1, md: 2, lg: 4 }}
+      spacing={6}
+      w={{ base: "100%", xl: "1210px" }}
+      mx='auto'
+    >
       {galleryImages.map((image) => (
         <ImageGalleryItem key={image} imageSrc={image} />
       ))}
-    </HStack>
+    </SimpleGrid>
   </Box>
 )
 
