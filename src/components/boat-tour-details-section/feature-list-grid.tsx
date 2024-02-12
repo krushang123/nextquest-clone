@@ -37,7 +37,7 @@ const FeatureList = (props: FeatureListProps) => {
 }
 
 const FeatureListGrid = () => (
-  <SimpleGrid columns={2}>
+  <SimpleGrid columns={{ base: 1, md: 2 }} spacingY={{ base: 6, md: 0 }}>
     <FeatureList
       title='Includes'
       features={[

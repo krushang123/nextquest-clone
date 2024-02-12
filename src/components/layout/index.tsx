@@ -4,6 +4,7 @@ import { ReactNode } from "react"
 
 import { Container, Box } from "@chakra-ui/layout"
 import { SkipNavLink, SkipNavContent } from "@chakra-ui/skip-nav"
+import { useBreakpointValue } from "@chakra-ui/react"
 
 import Header from "./header"
 import Navigation from "./navigation"
@@ -15,6 +16,10 @@ interface LayoutProps {
 const Layout = (props: LayoutProps) => {
   const { children } = props
 
+  const isDesktop = Boolean(
+    useBreakpointValue({ base: false, xl: true }, { ssr: true }),
+  )
+
   return (
     <Container maxW='100vw' p={0}>
       <SkipNavLink id='skip-nav' zIndex='skipLink'>
@@ -24,7 +29,7 @@ const Layout = (props: LayoutProps) => {
       <Box display='flex'>
         <Box w='full'>
           <Header />
-          <Navigation />
+          {isDesktop && <Navigation />}
 
           <Container
             as='main'

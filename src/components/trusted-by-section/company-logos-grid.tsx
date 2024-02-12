@@ -67,6 +67,7 @@ const CompanyLogo = (props: CompanyLogoProps) => {
   return (
     <Box w='full' h='70px' position='relative'>
       <Image
+        priority
         fill
         src={logo.src}
         alt={logo.alt}
@@ -79,7 +80,7 @@ const CompanyLogo = (props: CompanyLogoProps) => {
 }
 
 const CompanyLogosGrid = () => (
-  <SimpleGrid w='full' columns={6} gap={14}>
+  <SimpleGrid w='full' columns={{ base: 2, md: 6 }} gap={14}>
     {companyLogos.map((logo) => (
       <CompanyLogo key={logo.src} logo={logo} />
     ))}

@@ -34,6 +34,7 @@ const LanguageMenuItem = (props: LanguageMenuItemProps) => {
           alt={`${language.label} Flag`}
           blurDataURL={language.flag}
           sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+          sx={{ objectFit: "cover", objectPosition: "center" }}
         />
       </Box>
 

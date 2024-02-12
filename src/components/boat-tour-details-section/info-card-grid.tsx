@@ -6,6 +6,7 @@ import {
   Text,
   VStack,
   HStack,
+  Stack,
   Grid,
   GridItem,
 } from "@chakra-ui/layout"
@@ -59,7 +60,14 @@ const InfoCard = (props: InfoCardProps) => {
   const { infoCard } = props
 
   return (
-    <HStack spacing={6} px={6} py={4} border='1px solid #FAE2EB' rounded='2xl'>
+    <Stack
+      direction={{ base: "column", md: "row" }}
+      spacing={6}
+      px={6}
+      py={4}
+      border='1px solid #FAE2EB'
+      rounded='2xl'
+    >
       <Box w='40px' h='40px' position='relative'>
         <Image
           priority
@@ -79,15 +87,17 @@ const InfoCard = (props: InfoCardProps) => {
 
         <Text fontWeight='semibold'>{infoCard.content}</Text>
       </VStack>
-    </HStack>
+    </Stack>
   )
 }
 
 const InfoCardGrid = () => (
   <Grid
+    w='full'
     templateRows='repeat(3, 1fr)'
     templateColumns='repeat(2, 1fr)'
     columnGap={5}
+    rowGap={5}
   >
     {infoCards.map((infoCard) => (
       <GridItem colSpan={infoCard.colSpan} key={infoCard.title}>
