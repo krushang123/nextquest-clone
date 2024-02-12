@@ -4,17 +4,37 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "lint": "next lint",
+    "type-check": "tsc",
+    "check-format": "prettier --check .",
+    "format": "prettier --write .",
+    "theme": "chakra-cli tokens src/theme/index.ts",
+    "theme:watch": "chakra-cli tokens src/theme/index.ts --watch"
   },
   "dependencies": {
-    "next": "latest",
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/next-js": "^2.2.0",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@hookform/resolvers": "^3.3.4",
+    "framer-motion": "^11.0.3",
+    "next": "^14.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.50.1",
+    "react-icons": "^5.0.1",
+    "yup": "^1.3.3"
   },
   "devDependencies": {
-    "@types/node": "^12.12.21",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.1",
-    "typescript": "^4.8.3"
+    "@chakra-ui/cli": "^2.4.1",
+    "@types/node": "^20.11.17",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3"
   }
 }
