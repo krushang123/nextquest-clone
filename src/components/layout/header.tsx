@@ -5,6 +5,7 @@ import { Box, Flex, HStack } from "@chakra-ui/layout"
 import { Button, IconButton } from "@chakra-ui/button"
 import { Menu, MenuButton } from "@chakra-ui/menu"
 import { HamburgerIcon } from "@chakra-ui/icons"
+import { Link } from "@chakra-ui/next-js"
 
 import Logo from "./logo"
 import LanguageMenu from "./language-menu"
@@ -58,14 +59,16 @@ const Header = () => {
               Download Brochure
             </Button>
 
-            <Button
-              bgColor='white'
-              color='#8C52FF'
-              textTransform='uppercase'
-              _hover={{ bgColor: "white" }}
-            >
-              Contact Us
-            </Button>
+            <Link href='#contact-us'>
+              <Button
+                bgColor='white'
+                color='#8C52FF'
+                textTransform='uppercase'
+                _hover={{ bgColor: "white" }}
+              >
+                Contact Us
+              </Button>
+            </Link>
           </HStack>
         )}
       </Flex>

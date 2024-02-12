@@ -8,6 +8,7 @@ import { useBreakpointValue } from "@chakra-ui/react"
 
 import Header from "./header"
 import Navigation from "./navigation"
+import Footer from "./footer"
 
 interface LayoutProps {
   children: ReactNode
@@ -41,6 +42,8 @@ const Layout = (props: LayoutProps) => {
             <SkipNavContent id='skip-nav' />
             {children}
           </Container>
+
+          <Footer />
         </Box>
       </Box>
     </Container>

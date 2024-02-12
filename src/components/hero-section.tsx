@@ -2,6 +2,7 @@
 
 import { Button } from "@chakra-ui/button"
 import { Box, Heading, VStack } from "@chakra-ui/layout"
+import { Link } from "@chakra-ui/next-js"
 
 const HeroSection = () => (
   <Box as='section' w='full' px={{ base: 4, xl: 0 }} bgColor='primary.500'>
@@ -26,14 +27,16 @@ const HeroSection = () => (
         From €45 / person
       </Heading>
 
-      <Button
-        bgColor='white'
-        color='primary.500'
-        size='lg'
-        _hover={{ bgColor: "white" }}
-      >
-        Get A Quick Quote
-      </Button>
+      <Link href='#contact-us'>
+        <Button
+          bgColor='white'
+          color='primary.500'
+          size='lg'
+          _hover={{ bgColor: "white" }}
+        >
+          Get A Quick Quote
+        </Button>
+      </Link>
     </VStack>
   </Box>
 )

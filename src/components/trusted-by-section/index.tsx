@@ -13,7 +13,7 @@ const TrustedBySection = () => (
 
       <CompanyLogosGrid />
 
-      <Box w='full'>
+      <Box w='full' id='contact-us'>
         <ContactUsForm />
       </Box>
     </VStack>
